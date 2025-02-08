@@ -1,8 +1,8 @@
 <template>
   <div>
-    <UserSubmit />
+    <SubmitFrom />
   </div>
 </template>
 <script setup>
-import UserSubmit from "./components/UserSubmit.vue";
+import SubmitFrom from "./components/SubmitFrom.vue";
 </script>

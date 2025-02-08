@@ -12,6 +12,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { isValidPhoneNumber } from "libphonenumber-js";
+import { computed } from "vue";
 
 let userFullName = ref("");
 let userNumber = ref("+998");
@@ -36,7 +37,7 @@ const onFormSubmit = (event: any) => {
   }
 };
 
-const isFormValid = computed(
-  () => userNumber.value.length == 17 && userFullName.value.length >= 3
-);
+const isFormValid = computed(() => {
+  return userNumber.value.length == 17 && userFullName.value.length >= 3;
+});
 </script>
